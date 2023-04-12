@@ -8,6 +8,7 @@ import { RootState } from "../redux/store";
 import "./TodoItem.css";
 import { useSelector } from "react-redux";
 import { setFocus } from "../redux/slices/focusSlice";
+import { removeTodo } from "../redux/slices/todosSlice";
 interface TodoItemProps {
   id: number;
   title: string;
@@ -127,7 +128,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
       <div className="table-cell w-1/12 text-red-500">
         <button
           onClick={() => {
-            console.log("Delete");
+            dispatch(removeTodo({ id }));
           }}
         >
           <FontAwesomeIcon icon={faTrash} />

@@ -2,11 +2,24 @@ import { faArrowDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { useDispatch } from "react-redux";
+import { removeActive, setActive } from "../redux/slices/activeSlice";
 const CollapseButton = () => {
   const [showTodoForm, setShowTodoForm] = useState(false);
+  const dispatch = useDispatch();
+  const active = useSelector((state: RootState) => state.active.id);
+  if (showTodoForm && active !== 1) {
+    setShowTodoForm(false);
+  }
   return (
     <div
-      onClick={() => setShowTodoForm(!showTodoForm)}
+      onClick={() => {
+        setShowTodoForm(!showTodoForm);
+        if (showTodoForm) dispatch(removeActive());
+        else dispatch(setActive({ id: 1 }));
+      }}
       className="bg-m-gray-50 flex flex-col items-center text-white justify-center border-t border-dashed w-full hover:bg-m-gray-200 cursor-pointer"
     >
       <div className="h-10 text-2xl rounded-full bg-m-gray-300 flex items-center justify-center relative">
