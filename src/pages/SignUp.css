@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.field-container {
+  @apply mx-auto my-1 w-7/12 flex flex-col p-1 pl-5 border-solid border rounded-lg border-black focus-within:border focus-within:border-emerald-500 ;
+}

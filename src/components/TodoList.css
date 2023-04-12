@@ -1,0 +1,15 @@
+#root > div > div.flex.flex-col.items-center.mt-10.h-full.text-white > div > div.ant-collapse.ant-collapse-icon-position-start.ant-collapse-borderless.w-full.css-dev-only-do-not-override-1vtf12y > div > div.ant-collapse-header
+{
+    padding: 0px;
+}
+
+div.ant-collapse-content > div
+{
+    margin-top: 10px;
+    padding: 0px;
+}
+
+div.ant-collapse-content-box
+{
+    padding: 0px !important;
+}

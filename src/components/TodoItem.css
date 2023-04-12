@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button:hover {
+  border-radius: 1px;
+  border: 1px solid #352f2f;
+  background-color: #352f2f;
+  border-radius: 10px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  border: 1px solid transparent;
+}
+
+.table-row {
+  border-bottom: 1px solid #352f2f;
+}
+
+input{
+    @apply text-amber-300 border-emerald-500 border focus:outline-none;
+}
+
+.field{
+    @apply pl-2 pt-1 w-full rounded-lg;
+}
