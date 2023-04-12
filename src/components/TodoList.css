@@ -13,3 +13,8 @@ div.ant-collapse-content-box
 {
     padding: 0px !important;
 }
+
+div.ant-collapse-header
+{
+    padding: 0px !important;
+}
